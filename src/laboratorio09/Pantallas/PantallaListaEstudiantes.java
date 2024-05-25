@@ -153,8 +153,12 @@ public class PantallaListaEstudiantes extends javax.swing.JFrame {
 
         }
         else{
-             modelo.remove(indice);
-            Laboratorio09.listaEstudiantes.remove(indice);
+            int opcion = JOptionPane.showConfirmDialog(this, "Deseas eliminar a " + valor + " ?", "Alerta", JOptionPane.WARNING_MESSAGE);
+            if(opcion == JOptionPane.OK_OPTION){
+                modelo.remove(indice);
+                Laboratorio09.listaEstudiantes.remove(indice);
+            }
+           
         }
        
     }//GEN-LAST:event_btnEliminarActionPerformed
